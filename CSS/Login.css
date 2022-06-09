@@ -1,0 +1,134 @@
+body {
+
+  /*takes 100% of viewport height*/
+  height: 100vh;
+
+  /*remove scrollbars*/
+  overflow: hidden;
+  font-family: system-ui;
+  background: linear-gradient(120deg, black, rgb(255, 80, 37));
+  text-align: center;
+}
+
+.main-content {
+
+  /*fixed position is according to the viewport*/
+  position: fixed;
+
+  /*to be placed in center of screen*/
+  top: 50%;
+  left: 50%;
+
+  /*to shift its origin to its center*/
+  transform: translate(-50%, -50%);
+  width: 500px;
+  background-color: white;
+  border-radius: 10px;
+
+  /*padding for right and left*/
+  padding: 0 40px;
+}
+
+div h1 {
+  text-align: center;
+
+  /*padding for bottom only*/
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid silver;
+}
+
+.input-field {
+
+  /*placed relative to its normal position to not be affected by margins*/
+  position: relative;
+  border-bottom: 2px solid rgb(255, 80, 37);
+
+  /*margin for top and bottom*/
+  margin: 30px 0;
+}
+
+.input-field input {
+  width: 100%;
+
+  /*padding for right and left only*/
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+label {
+
+  /*placed relative to input field class*/
+  position: absolute;
+
+  /*to be placed a little to the bottom*/
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+
+  /*to transformits origin on y to its center*/
+  transform: translateY(-50%);
+  font-size: 16px;
+
+  /*to make textbox clickable when clicked on it*/
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+/*a label preceeded with a textbox when it has focus and when its valid*/
+.input-field input:focus ~ label, .input-field input:valid ~ label{
+
+  /*to move the label up*/
+  top: -5px;
+  color: rgb(255, 80, 37);
+}
+
+input[type="submit"] {
+  width: 90%;
+  height: 50px;
+  border: 1px solid;
+  background-color: rgb(255, 80, 37);
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s;
+}
+
+input[type="submit"]:hover {
+  width: 100%;
+  border-color: rgb(255, 80, 37);
+}
+
+input[type="submit"]:disabled {
+  width: 90%;
+  height: 50px;
+  background-color:lightgrey;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  outline: none;
+}
+
+.login-link {
+
+  /*margin for top and bottom only*/
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+}
+
+a {
+  color: rgb(255, 80, 37);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
