@@ -24,4 +24,4 @@ It has a login-signup system tha trelies on LocalStorage to store user data.
 
 - An About Us page
 
-<img src="https://github.com/Amr-Wael-Dev//blob/main/Resources/8.jpg" alt="About Us" title="About Us" width="500" height="300">
+<img src="https://github.com/Amr-Wael-Dev/NetFilms/blob/main/Resources/8.jpg" alt="About Us" title="About Us" width="500" height="300">
