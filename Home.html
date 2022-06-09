@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <!-- <meta name="description" content=""> -->
+    <title>NetFilmes</title>
+    <link rel="icon" href="Images/logo.png">
+    <!--logo of web site-->
+    <link rel="stylesheet" href="CSS/Home.css" />
+
+</head>
+
+<body>
+    <script>
+        if (localStorage.getItem("mode") === "dark") {
+            document.querySelector("body").style.backgroundColor = "black";
+        }
+        else if (localStorage.getItem("mode") === "light") {
+            document.querySelector("body").style.backgroundColor = "white";
+        }
+        else {
+
+        }
+    </script>
+    <header>
+
+        <div class="navbar">
+            <div class="logo">
+
+                <a href="Home.html">
+                    <h1 class="logo">NetFilmes</h1>
+                </a>
+
+            </div>
+
+            <p id="username-home"></p>
+
+
+            <nav>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="#first">Movies</a></li>
+                    <li><a href="About Us.html">About Us</a></li>
+                    <li><a href="#contact us">Contact Us</a></li>
+                </ul>
+            </nav>
+
+
+            <div class="log">
+
+                <a href="Signup.html" class="signup">sign up</a>
+                <a href="Login.html" class="login">login</a>
+
+                <button type="button" class="logout" onclick="logOut()">Log Out</button>
+
+                <div class="clear"></div>
+            </div>
+
+        </div>
+        <div class="clear"></div>
+        <script>
+            if (localStorage.getItem("loggedIn") === "true") {
+                document.querySelector(".signup").classList.add("hidden-in-nav");
+                document.querySelector(".login").classList.add("hidden-in-nav");
+                document.querySelector(".logout").classList.remove("hidden-in-nav");
+            }
+            else if (localStorage.getItem("loggedIn") === "false") {
+                document.querySelector(".signup").classList.remove("hidden-in-nav");
+                document.querySelector(".login").classList.remove("hidden-in-nav");
+                document.querySelector(".logout").classList.add("hidden-in-nav");
+            }
+        </script>
+    </header>
+
+    <div id="slider"> </div>
+
+
+    <div class="container" id="first">
+        <div class="movies">
+            <img src="Images/movies posters/tenet.jpg" alt="Tenet">
+            <a href="Tenet.html">
+                <div class="story">
+                    <h3>Story</h3>
+                    <p class="text">Dust spreads to the bottom of the earth, and diseases that strike natural resources, and
+                        the human race becomes vulnerable to annihilation; Because of the lack of food and the spread of
+                        epidemics, and therefore a group of explorers led by the pilot (Cooper) seeks to travel on an
+                        unknown space flight through the wormhole in order to search for a habitat and another planet fit
+                        for life in order to save humanity.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="movies">
+           <img src="Images/movies posters/inception.jpg" alt="Inception">
+           <a href="Inception.html">
+                <div class="story">
+                    <h3>Story</h3>
+                    <p class="text">Cobb (Leonardo DiCaprio) is a very special and super high-class customer, in fact a dream hacker! He is recruited by a super-rich businessman named Saito to infiltrate the mind of one of his competitors named (Robert Fisher) with the help of a special device, to implant an idea into the man's mind that appears to come from within himself, not from outside. The idea is for the man to dismantle his father's companies that he will bequeath from him.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="movies">
+            <img src="Images/movies posters/Avengers.jpg" alt="Avengers">
+            <a href="Avengers.html">
+                <div class="story">
+                    <h3>Story</h3>
+                    <p class="text">After Thanos carries out his evil plan after seizing the Six Eternity Stones, and wiping out half of the planet's population, the paths of those who remained alive from the Avengers team are dispersed throughout, leaving many pending questions: Is there hope for victory over Thanos? Is there a solution to set things right again?</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="movies">
+            <img src="Images/movies posters/Avatar.jpg" alt="Avatar">
+            <a href="Avatar.html">
+                <div class="story">
+                    <h3>Story</h3>
+                    <p class="text">If the research is in humans (the unique moon Pandora), then it contains a decline in economic importance. This moon living blue living creatures in marine organisms, with each other in their surroundings with each other.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <footer id="contact us">
+
+        <p>NetFilmes aims to help you to know all things about any film that you want..</p>
+        <p>If you have any problem contact us to help you..</p>
+        <img src="Images/logo+word.png" alt="logo">
+
+        <form>
+            <p>Contact Us</p>
+            <!-- <label>Name</label><br> -->
+            <!-- <input type="text" placeholder="Name" name="contact"><br> -->
+            <!-- <label>Email Address</label><br> -->
+            <input type="text" placeholder="Email Address" name="contact"><br>
+            <!-- <label>Message</label><br> -->
+            <textarea placeholder="Message"></textarea>
+            <input type="submit" value="Send">
+        </form>
+
+    </footer>
+
+    <div class="copyright">
+        Made With <span>NetFilmes</span> Team &copy; 2020
+    </div>
+
+    <script src="JS/Home Page.js"></script>
+</body>
+
+</html>

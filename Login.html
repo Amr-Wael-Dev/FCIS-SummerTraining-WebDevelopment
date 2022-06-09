@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="CSS/Login.css" />
+</head>
+
+<body onload="getSignupInfo()">
+
+  <div class="main-content">
+    <h1>Login</h1>
+
+    <div class="input-field">
+      <input type="email" required />
+      <label>E-mail Address</label>
+    </div>
+
+    <div class="input-field">
+      <input type="password" required />
+      <label>Password</label>
+    </div>
+
+    <input type="submit" value="Log In" onclick="checkLoginInfo()">
+
+    <div class="login-link">
+      Don't have an account ? <a href="Signup.html">Sign Up</a>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="JS/Login.js"></script>
+</body>
+
+</html>
